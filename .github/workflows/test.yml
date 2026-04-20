@@ -30,7 +30,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Clone API repo
-        run: git clone https://github.com/propeller-commerce/propeller-sdet-task-viktorija-todosieva.git api
+        run: git clone https://${{ secrets.API_REPO_TOKEN }}@github.com/propeller-commerce/propeller-sdet-task-viktorija-todosieva.git api
 
       - name: Start API with Docker Compose
         run: |
