@@ -19,6 +19,16 @@ Then run the tests:
 npm test
 ```
 
+## CI/CD Pipeline
+
+A GitHub Actions pipeline is configured to run automatically on every push to master.
+
+The pipeline has two jobs:
+- **Build** — installs dependencies and compiles TypeScript
+- **Test** — clones the API repo, spins up the service with Docker Compose, seeds the database and runs the automated tests
+
+The pipeline runs against the API's master branch. Failing tests indicate bugs that exist in the codebase — this is intentional and proves the tests are working correctly.
+
 ## Bugs found and fixed
 
 ### Bug #1 — Status filter inverted
